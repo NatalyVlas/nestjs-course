@@ -3,12 +3,12 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class CalcService {
    
-    getResult(a: number, b: number, operator: string): number | string {
-        if (operator === 'plus') {
+    getResult(a: number, b: number, operation: string): number | string {
+        if (operation === 'plus') {
             return a + b;
-        } else if (operator === 'minus') {
+        } else if (operation === 'minus') {
             return a - b;
-        } else if (operator === 'multiply') {
+        } else if (operation === 'multiply') {
             return a * b;
         } else {
             return 'Введите правильные параметры'
